@@ -105,6 +105,10 @@ snippet defupdate
 			end
 		end
 	end
+snippet defset
+  def set_${1:model_class_name}
+      @$1 = ${2:ModelClassName}.find(params[:id])
+    end
 snippet defparams
 	def ${1:model_class_name}_params
 		params.require(:$1).permit()
